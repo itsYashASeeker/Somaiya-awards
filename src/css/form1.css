@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Share+Tech&family=Ubuntu:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+}
+
+body {}
+
+#root {
+    min-height: 100vh;
+    background: rgb(255, 215, 215);
+    background-image: url("../campus.jpg");
+    /* background: linear-gradient(0deg, rgba(255, 215, 215, 1) 0%, rgba(255, 236, 236, 1) 35%, rgba(235, 228, 228, 1) 71%, rgba(255, 255, 255, 1) 100%); */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    height: 4rem;
+    background: rgb(255, 255, 255);
+    color: rgb(163, 0, 0);
+    width: 100%;
+    z-index: 5;
+    box-shadow: 0 0 0.3rem black;
+}
+
+.navbar .kjLogo {
+    height: 3rem;
+}
+
+.navbar .nav1 {
+    /* background: red; */
+    display: flex;
+    flex-grow: 1;
+    justify-content: end;
+    align-items: center;
+}
+
+.navbar .n1 {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 0 1rem;
+}
+
+.fbg {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    /* background: rgb(145, 145, 145); */
+    padding-top: 4rem;
+}
+
+.desc {
+    background: rgba(255, 255, 255, 0.6);
+    /* box-shadow: inset 0 0 1rem 0.05rem rgb(0, 0, 0); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem 0;
+    backdrop-filter: blur(0.2rem);
+}
+
+.desc .topicDesc {}
+
+.desc .topicDesc .header {
+    font-size: 2rem;
+    text-align: left;
+    padding: 0.4rem;
+    color: rgb(94, 0, 0);
+}
+
+.desc .topicDesc .hdesc {
+    background: rgba(236, 236, 236, 0.918);
+    color: rgb(94, 0, 0);
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 0.3rem;
+    border: 0.2rem solid rgba(100, 100, 100, 0.356);
+    width: 60%;
+}
+
+.desc .Status {
+    display: flex;
+    margin: 0 1rem;
+    flex-grow: 1;
+}
+
+.desc .Status span {
+    position: relative;
+    padding: 0.5rem;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0.5rem;
+    background: rgba(228, 219, 219, 0.829);
+    box-shadow: 0 0 0.5rem black;
+    color: black;
+    transition: 0.3s all ease-out;
+}
+
+.desc .Status span:hover {
+    background: rgb(255, 255, 255);
+}
+
+.desc .Status span::before {
+    position: absolute;
+    content: "";
+    width: 1rem;
+    height: 0.2rem;
+    background: black;
+    right: -1rem;
+}
+
+.desc .Status span:nth-last-child(1):before {
+    width: 0;
+}
+
+.desc .Status .selected {
+    background: red;
+    color: white;
+}
+
+.desc .Status .selected:hover {
+    background: rgb(187, 0, 0);
+}
+
+.divider1 {
+    background: rgba(134, 134, 134, 0.678);
+    height: 0.15rem;
+    width: 40%;
+    margin: 1rem 0;
+}
+
+
+
+
+
+
+
+/* .conCard{
+    background: rgba(255, 255, 255, 0.6);
+    width: 100%;
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
+} */
+
+.inCard {
+    width: 100%;
+    background: white;
+    background: rgba(255, 255, 255, 0.6);
+    position: relative;
+    flex-direction: column;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    text-align: left;
+    /* border-radius: 0.7rem; */
+    box-sizing: border-box;
+    /* border: 0.2rem solid rgba(218, 0, 0, 0.63); */
+    /* box-shadow: 0.4rem 0.4rem 0rem 0.05rem rgba(151, 0, 0, 0.39); */
+    margin: 1rem 0;
+}
+
+.inCard .ins {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    width: 100%;
+}
+
+.inCard .ins .inHeader {
+    position: relative;
+}
+
+.inCard .ins .inHeader::after {
+    content: ":";
+}
+
+.inCard .ins .inHeader::before {
+    position: absolute;
+    content: "";
+    width: 0.4rem;
+    height: 0.4rem;
+    background: red;
+    border-radius: 50%;
+    left: -0.5rem;
+    top: 0.2rem;
+}
+
+.inCard input {
+    outline: none;
+    border: 0.2rem solid rgba(53, 52, 52, 0.719);
+    border-radius: 0.7rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    transition: 0.2s all ease-out;
+    flex-grow: 1;
+    /* width: 100%; */
+    margin-left: 1rem;
+}
+
+.inCard input:focus {
+    border: 0.2rem solid rgb(49, 49, 49);
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.05rem grey;
+}
+
+.inCard .Done {
+    background: blue;
+    color: white;
+    outline: 0;
+    padding: 0.3rem;
+    font-size: 1.2rem;
+    border: none;
+    box-shadow: 0 0 0.05rem 0.2rem rgb(82, 82, 255);
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+
+
+
+.Next {
+    position: relative;
+    padding: 0.4rem;
+    font-size: 1.5rem;
+    color: white;
+    background: blue;
+    outline: 0;
+    border: none;
+    box-shadow: 0 0 0.05rem 0.2rem rgb(69, 118, 255);
+    border-radius: 0.3rem;
+    transition: 0.1s all ease-out;
+    cursor: pointer;
+}
+
+.Next::before {
+    position: absolute;
+    content: ">>";
+    left: -2rem;
+    transition: 0.5s all ease-out;
+    opacity: 0;
+}
+
+.Next:hover {
+    padding-right: 2.5rem;
+}
+
+.Next:hover::before {
+    left: 4rem;
+    opacity: 1;
+}
+
+
+.Status button {
+    background: none;
+    padding: none;
+    border: none;
+}
